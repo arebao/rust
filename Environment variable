@@ -1,0 +1,19 @@
+PUB_HOSTED_URL
+https://pub.flutter-io.cn
+RUSTUP_DIST_SERVER
+https://mirrors.ustc.edu.cn/rust-static
+RUSTUP_HOME
+D:\App\Rust\.rustup
+RUSTUP_UPDATE_ROOT
+https://mirrors.ustc.edu.cn/rust-static/rustup
+
+$ # for bash
+$ echo 'export RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup' >> ~/.bash_profile
+$ # for fish
+$ echo 'set -x RUSTUP_DIST_SERVER https://mirrors.tuna.tsinghua.edu.cn/rustup' >> ~/.config/fish/config.fish
+
+[source.crates-io]
+replace-with = 'tuna'
+
+[source.tuna]
+registry = "https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git"

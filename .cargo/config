@@ -1,0 +1,31 @@
+[source.crates-io]
+replace-with = 'ustc'
+
+[source.ustc]
+registry = "https://mirrors.ustc.edu.cn/crates.io-index"
+
+[source.tuna]
+registry = "https://mirrors.tuna.tsinghua.edu.cn/git/crates.io-index.git"
+
+
+[target.x86_64-pc-windows-msvc]
+rustflags = ["-C", "target-feature=+crt-static"]
+
+[target.x86_64-pc-windows-gnu]
+rustflags = ["-C", "link-arg=-s"]
+
+
+[target.aarch64-linux-android]
+ar = "D:/App/Android/android-ndk-r21e/NDK/arm64/bin/aarch64-linux-android-ar.cmd"
+linker = "D:/App/Android/android-ndk-r21e/NDK/arm64/bin/aarch64-linux-android-clang.cmd"
+rustflags = ["-C", "link-arg=-s"]
+
+[target.armv7-linux-androideabi]
+ar = "D:/App/Android/android-ndk-r21e/NDK/arm/bin/arm-linux-androideabi-ar.cmd"
+linker = "D:/App/Android/android-ndk-r21e/NDK/arm/bin/arm-linux-androideabi-clang.cmd"
+rustflags = ["-C", "link-arg=-s"]
+
+[target.i686-linux-android]
+ar = "D:/App/Android/android-ndk-r21e/NDK/x86/bin/i686-linux-android-ar"
+linker = "D:/App/Android/android-ndk-r21e/NDK/x86/bin/i686-linux-android-clang"
+rustflags = ["-C", "link-arg=-s"]
