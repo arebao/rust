@@ -1,5 +1,5 @@
 [source.crates-io]
-replace-with = 'ustc'
+replace-with = 'tuna'
 
 [source.ustc]
 registry = "https://mirrors.ustc.edu.cn/crates.io-index"
